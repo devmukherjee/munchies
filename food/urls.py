@@ -1,6 +1,6 @@
 from . import views
 from django.urls import path
-
+#app name variable is used for namespacing gives us a manageable way to handle namespaces for url patterns
 app_name= 'food'
 urlpatterns = [
     path('',views.index,name= "index"),
