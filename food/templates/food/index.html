@@ -10,14 +10,19 @@
     {% block body %}
     {% for item in item_list %}
     <!-- {{item.id}}---{{item.item_name}} -->
-    <ul>
-       <li>
-           <!-- <a href="/food/{{item.id}}"> {{item.id}}---{{item.item_name}}</a> -->
-           <!-- removing hardcoded url for loose coupling -->
-           <a href="{% url 'food:detail' item.id %}"> {{item.id}}---{{item.item_name}}</a>
-          
-       </li>
-    </ul>
+    <div class="row">
+        <div class="col-md-3 offset-md-1 ">
+            <div class="card" height="150px"><img src="{{item.item_image}}" alt="Food image"/></div>         
+        </div>
+        <div class="col-md-4">
+            <h3>{{item.item_name}}</h3>
+            <h5>{{item.item_desc}}</h5>
+            <h6>{{item.item_price}}</h6>
+        </div>
+        <div class="col-md-2">
+            <a href="{% url 'food:detail' item.id %}" class="btn btn-success">Details</a>
+        </div>
+    </div>
    {% endfor %} 
    {% endblock %} 
 </body>
