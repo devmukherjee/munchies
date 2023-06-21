@@ -15,6 +15,7 @@ def index(request):
     return render(request,'food/index.html',context)
 
 def items(request):
+    #this is a random view just for testing
     return HttpResponse("<h1>This is an Item View</h1><br><p>This Page shows a list of items</p>")
 
 def details(request,item_id):
