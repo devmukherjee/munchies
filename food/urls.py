@@ -6,5 +6,7 @@ urlpatterns = [
     path('',views.index,name= "index"),
     path('<int:item_id>',views.details,name="detail"),
     path('items',views.items,name= "items"),
+    # add item to the databse
+    path('add',views.create_item,name="create_item"),
     
 ]
