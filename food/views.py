@@ -3,7 +3,8 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import Item
 from .forms import ItemForm
-from django.views.generic import ListView,DetailView
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView 
 
 # COnverted above function based view into class based viewiew
