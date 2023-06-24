@@ -128,3 +128,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL= 'food:index'
 LOGIN_URL= 'login'
+import os
+MEDIA_ROOT= os.path.join(BASE_DIR,'pictures')
+MEDIA_URL= '/pictures/'
